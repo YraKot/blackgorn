@@ -1,34 +1,92 @@
 extends ../layouts/default
 
-block intro
-	.container
-		h1 Contact Us
+//- block intro
+//- 	.container
+//- 		h1 Contact Us
 		
 block content
-	.container
-		if enquirySubmitted
-			h3 Thanks for getting in touch.
-		else
-			.row: .col-sm-8.col-md-6
-				form(method='post')
-					input(type='hidden', name='action', value='contact')
-					.form-group(class=validationErrors.name ? 'has-error' : null)
-						label Name
-						input(type='text', name='name.full', value=formData['name.full']).form-control
-					.form-group(class=validationErrors.email ? 'has-error' : null)
-						label Email
-						input(type='email', name='email', value=formData.email).form-control
-					.form-group
-						label Phone
-						input(type='text', name='phone', value=formData.phone, placeholder='(optional)').form-control
-					.form-group(class=validationErrors.enquiryType ? 'has-error' : null)
-						label What are you contacting us about?
-						select(name='enquiryType').form-control
-							option(value='') (select one)
-							each type in enquiryTypes
-								option(value=type.value, selected=formData.enquiryType == type.value)= type.label
-					.form-group(class=validationErrors.message ? 'has-error' : null)
-						label Message
-						textarea(name='message', placeholder='Leave us a message...' rows=4).form-control= formData.message
-					.form-actions
-						button(type='submit').btn.btn-primary Send
+	.contact_wrap
+		.contact_jumbotron
+			img(src='/images/contact_us.jpg', alt='')
+		.contact_form_wrap
+			.contact_form
+				form(action='')
+					p CONTACT DETAILS:
+					p Name (Required)
+						input(type='text', placeholder='Your name')
+					p Email (Required)
+						input(type='text')
+					p Telephone (Required)
+						input(type='text')
+					p ENQUIRY DETAILS:
+					p Type of enquiry (Required)
+						input(type='text')
+					p
+						| Please supply as much information as possible about your enquiry. This will allow us to respond to you quickly and effectively.
+						textarea(name='', id='', cols='40', rows='10', aria-invalid='false')
+					br
+					button send
+
+			.contact_content_wrap
+				.contact_content
+					.emtyspace
+					h1 CONTACT BEX SIMON
+					.separator
+					p
+						| If you are interested in speaking to Bex about a project you would like to commission or collaborate on, please get in touch using the form below.
+						| Bex or a member of her team will typically respond within 48 hours.
+					.separator
+					p
+						strong Workshop
+						| :
+						br
+						| 						Wild Fields Farm
+						br
+						| 						Wood Street Village
+						br
+						| 						Guildford
+						br
+						| 						GU3 3BP
+					p
+						strong Office:
+						br
+						| 						108 High Road
+						br
+						| 						Byfleet, Surrey
+						br
+						| 						KT14 7QT
+					p
+						strong Tel:
+						|  01483 828898
+					.separator
+				.contact_logo
+					img(src='images/contact_logo.png', alt='')
+
+
+	//- .container
+	//- 	if enquirySubmitted
+	//- 		h3 Thanks for getting in touch.
+	//- 	else
+	//- 		.row: .col-sm-8.col-md-6
+	//- 			form(method='post')
+	//- 				input(type='hidden', name='action', value='contact')
+	//- 				.form-group(class=validationErrors.name ? 'has-error' : null)
+	//- 					label Name
+	//- 					input(type='text', name='name.full', value=formData['name.full']).form-control
+	//- 				.form-group(class=validationErrors.email ? 'has-error' : null)
+	//- 					label Email
+	//- 					input(type='email', name='email', value=formData.email).form-control
+	//- 				.form-group
+	//- 					label Phone
+	//- 					input(type='text', name='phone', value=formData.phone, placeholder='(optional)').form-control
+	//- 				.form-group(class=validationErrors.enquiryType ? 'has-error' : null)
+	//- 					label What are you contacting us about?
+	//- 					select(name='enquiryType').form-control
+	//- 						option(value='') (select one)
+	//- 						each type in enquiryTypes
+	//- 							option(value=type.value, selected=formData.enquiryType == type.value)= type.label
+	//- 				.form-group(class=validationErrors.message ? 'has-error' : null)
+	//- 					label Message
+	//- 					textarea(name='message', placeholder='Leave us a message...' rows=4).form-control= formData.message
+	//- 				.form-actions
+	//- 					button(type='submit').btn.btn-primary Send
