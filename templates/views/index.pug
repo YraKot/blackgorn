@@ -1,23 +1,27 @@
 extends ../layouts/default
 
 block content
-	.container: .jumbotron
-		img(src='/images/logo.svg', width='160')
-		h1 Welcome
-		p This is your new <a href='http://keystonejs.com' target='_blank'>KeystoneJS</a> website.
-		p It includes the latest versions of
-			| <a href='http://getbootstrap.com/' target='_blank'>Bootstrap</a>
-			| and <a href='http://www.jquery.com/' target='_blank'>jQuery</a>.
-		p Visit the <a href='http://keystonejs.com/guide' target='_blank'>Getting Started</a> guide to learn how to customise it.
-		hr
-		if user && user.canAccessKeystone
-			p
-				a(href='/keystone').btn.btn-lg.btn-primary Open the Admin UI
-		else
-			p We have created a default Admin user for you with the email <strong>admin@mail.com</strong> and the password <strong>12345</strong>.
-			p
-				a(href='/keystone/signin', style='margin-right: 10px').btn.btn-lg.btn-primary Sign in
-				|  to use the Admin UI.
-		hr
-		p Remember to <a href='https://github.com/keystonejs/keystone' target='_blank'>Star KeystoneJS on GitHub</a> and
-			| <a href='https://twitter.com/keystonejs' target='_blank'>follow @keystonejs</a> on twitter for updates.
+	.slider_wrap
+		.slider
+			.slides: img(src="./images/slider1.jpg", alt="")
+			.slides: img(src="./images/slider2.jpg", alt="")
+			a.prev(onclick="changeSlide(-1)") &#10094
+			a.next(onclick="changeSlide(1)") &#10095
+	
+	.content_wrapper
+		.content_wrap_img
+			.content_img
+				img(src='/images/simon.jpg', alt='')
+		.content_wrap_info
+			.content_info
+				h1 BEXSIMON ARTSMITH
+				p
+					| Bex sees Artist Blacksmiths today as those who use the traditions of the ancient craft of blacksmithing with contemporary forms of metal-smithing to produce modern artwork. Bex refers to herself as an ‘artsmith’ to distinguish this new style. She is unconstrained in her approach to design, drawing inspiration from limitless sources of research. 
+					br
+					| And that is how Bex Simon works: blending traditional craft with contemporary design and modern methods of fabrication; fizzing with creativity and passion for her art; embodying the very idea of the artsmith. 
+					br
+					| “I love the idea that you can take something so hard and strong, add heat to make it malleable, almost fluid, and create something beautiful. And then when it cools, and the hard properties return, the movement and life remain, encapsulated in the artwork forever.” 
+					br
+					| On this website you will find many examples of Bex’s work. High end interior design, bespoke metalwork commissions – featuring bespoke gates, railings and balconies – sculptural pieces for gardens of any scale, and cast iron kitchenware. You will also see examples of the commissions undertaken by Bex Simon and her skilled team, creating some of the most innovative public art in the UK. 
+					br
+					| If you would like to talk to Bex about your requirements, don’t hesitate to get in touch.
