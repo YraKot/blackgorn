@@ -6895,6 +6895,56 @@ button.close {
   display: flex;
   justify-content: center;
 }
+.content_video_wrapper .jumbotron img {
+  width: 100%;
+}
+.content_video_wrapper .content_wrap .content {
+  border: 1px solid #f00;
+}
+.content_video_wrapper .content_wrap .content .separator {
+  background-color: #000;
+  height: 2px;
+  margin: 10px 0;
+}
+.content_video_wrapper .content_wrap .grid {
+  border: 1px solid #00f;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+.content_video_wrapper .content_wrap .grid .cell {
+  border: 1px solid #008000;
+  flex-basis: 10%;
+  margin: 15px;
+}
+.bio_page_wrap {
+  border: 1px solid #f00;
+  display: flex;
+  flex-direction: row;
+}
+.bio_page_wrap .bio_page_img {
+  border: 1px solid #f00;
+  width: 50%;
+}
+.bio_page_wrap .bio_page_img img {
+  width: 100%;
+}
+.bio_page_wrap .bio_page_info_wrap {
+  border: 1px solid #f00;
+  width: 50%;
+  padding: 0 50px 0 30px;
+}
+.bio_page_wrap .bio_page_info_wrap .bio_page_info h1 {
+  margin: 35px 0;
+}
+.bio_page_wrap .bio_page_info_wrap .bio_page_info p {
+  text-align: justify;
+  font-size: 18px;
+  line-height: 28px;
+  font-family: 'Roboto Condensed', sans-serif;
+  margin-top: 25px;
+}
 footer {
   border: 1px solid #f00;
   background-color: #443b39;
