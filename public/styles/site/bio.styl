@@ -1,26 +1,27 @@
-.bio_page_wrap
-	border: 1px solid red;
-	display flex
-	flex-direction row
+.bio_content
+	padding 0 30px 0 30px
 	
-	.bio_page_img
-		border 1px solid red 
-		width 50%
-		img 
-			width 100%
-	
-	.bio_page_info_wrap
-		border 1px solid red
-		width 50%
-		padding 0 50px 0 30px
-		.bio_page_info
-			h1 
-				margin 35px 0
-			p
-				text-align justify
-				font-size 18px
-				line-height 28px
-				font-family 'Roboto Condensed', sans-serif
-				margin-top 25px
-			
+	h1 
+		color: #443b39;
+		font-family: "PT sans", sans-serif;
+		font-weight: 600;
+		font-size: 30px;
+		text-transform: uppercas;
+		margin: 0;
+	p
+		text-align justify
+		font-size 18px
+		line-height 28px
+		font-family 'Roboto Condensed', sans-serif
+		margin-top 25px
 
+@media screen and (max-width: 768px)
+	.container_img
+		width 100% !important
+	.container_content
+		width 100%	!important
+		// padding: 0 5% 
+
+		.bio_content
+			padding 0 !important
+			padding-bottom: 2% !important

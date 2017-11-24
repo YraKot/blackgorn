@@ -5,29 +5,29 @@ extends ../layouts/default
 //- 		h1 Contact Us
 		
 block content
-	.contact_wrap
-		.contact_jumbotron
-			img(src='/images/contact_us.jpg', alt='')
-		.contact_form_wrap
-			.contact_form
-				form(action='')
-					p CONTACT DETAILS:
-					p Name (Required)
-						input(type='text', placeholder='Your name')
-					p Email (Required)
-						input(type='text')
-					p Telephone (Required)
-						input(type='text')
-					p ENQUIRY DETAILS:
-					p Type of enquiry (Required)
-						input(type='text')
-					p
-						| Please supply as much information as possible about your enquiry. This will allow us to respond to you quickly and effectively.
-						textarea(name='', id='', cols='40', rows='10', aria-invalid='false')
-					br
-					button send
+	.jumbotron(style="background-image: url('/images/contact_us.jpg');")
+	.wrapper
+		.container
+			.container_img
+				.contact_form
+					form(action='')
+						p CONTACT DETAILS:
+						p Name (Required)
+							input(type='text', placeholder='Your name')
+						p Email (Required)
+							input(type='text')
+						p Telephone (Required)
+							input(type='text')
+						p ENQUIRY DETAILS:
+						p Type of enquiry (Required)
+							input(type='text')
+						p
+							| Please supply as much information as possible about your enquiry. This will allow us to respond to you quickly and effectively.
+							textarea(name='', id='', cols='40', rows='10', aria-invalid='false')
+						br
+						button send
 
-			.contact_content_wrap
+			.container_content
 				.contact_content
 					.emtyspace
 					h1 CONTACT BEX SIMON
@@ -61,6 +61,8 @@ block content
 					.separator
 				.contact_logo
 					img(src='images/contact_logo.png', alt='')
+
+
 
 
 	//- .container

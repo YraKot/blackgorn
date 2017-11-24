@@ -1,10 +1,11 @@
 extends ../layouts/default
 block content
-	.jumbotron
-	.container
-		.head
+	.jumbotron(style="background-image: url('/images/blog.jpg');")
+	.wrapper
+		.header_content
 			h1 A FEMALE ARTIST BLACKSMITH’S BLOG
 			p Welcome to Bex’s occasional blog. Usually too busy sketching, forging or hammering, she sometimes has the time to put fingers to keyboard and bring you her thoughts.
+			
 		.grid
 			a.cell( href="#")
 				.post_img
@@ -60,6 +61,7 @@ block content
 				.post_text
 					p 18 AUGUST, 2017 IN LATEST NEWS
 					h3 Head Talks & My Bipolar
+
 
 //- mixin post(post)
 //- 	.post(data-ks-editable=editable(user, { list: 'Post', id: post.id }))

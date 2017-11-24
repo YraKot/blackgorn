@@ -1,24 +1,51 @@
-.content_video_wrapper
-	.jumbotron
-		img 
-			width 100%
-	.content_wrap
-		// padding 0 50px
-		.content
-			border 1px solid red
-			.separator
-				background-color #000
-				height 2px
-				margin 10px 0
-	
-		.grid
-			border 1px solid blue
-			display flex
-			flex-direction row
-			flex-wrap wrap
-			justify-content center
-			.cell
-				border 1px solid green
-				flex-basis (50% - 40px)
-				margin 15px
+.header_content
+	margin: 20px 0
 
+	h1 
+		color: #443b39;
+		font-family: "PT sans", sans-serif;
+		font-weight: 600;
+		font-size: 30px;
+		text-transform: uppercas;
+
+	.separator
+		background-color #000
+		height 2px
+		margin 10px 0
+	p
+		text-align justify
+		font-size 18px
+		line-height 28px
+		font-family 'Roboto Condensed', sans-serif
+
+.container
+	justify-content center
+	.cell
+		width 48%
+		height: 100%
+		h3 
+			color: #000;
+			font-family: "PT sans", sans-serif;
+			font-size: 22px;
+			text-transform: uppercas;
+		p
+			text-align justify
+			font-size 14px
+			line-height 24px
+			font-family 'Roboto Condensed', sans-serif
+			padding: 20px 0
+		iframe 
+			max-width 100%
+
+	.cell:nth-child(odd)
+		padding-right: 2%
+	.cell:nth-child(even)
+		padding-left: 2% 
+
+@media screen and (max-width 768px)
+	.cell 
+		width 100% !important
+	.cell:nth-child(odd)
+		padding-right: 0 !important
+	.cell:nth-child(even)
+		padding-left: 0 !important

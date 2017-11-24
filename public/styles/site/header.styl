@@ -1,0 +1,111 @@
+header
+	background-color: rgba(68, 59, 57, 1);
+	width: 100%;
+	height: 151px;
+	border-bottom: 1px solid white;
+
+	.header_inner
+		padding: 0 50px;
+		display: flex;
+		flex-direction: row;
+		flex-wrap: wrap;
+		justify-content: space-between;
+		align-items: center;
+
+		.header_logo_wrap
+			flex-grow 1
+			height 150px
+
+		.icon
+			display none
+			
+		.header_menu
+			flex-grow 2
+			text-align center
+			ul 
+				margin: 0;
+				padding: 0;
+				li 
+					display: inline-block;
+				
+					a 
+						color: white;
+						font-size: 12px;
+						letter-spacing: 4px;
+						text-transform: uppercase;
+						text-decoration: none;
+						padding: 0 24px;
+						font-family: 'Roboto Condensed', sans-serif;
+
+				.dropdown 
+					position: relative
+
+					.drop-nav
+						position: absolute
+						// top 85pxhyse
+						display: none
+						background: white
+						li 
+							border-top 1px solid black
+							padding 7px 0
+							a 
+								color black
+						li:first-child 
+							border none
+					
+				
+				
+				.dropdown:hover
+					.drop-nav
+						display: block
+					
+		.header_icon
+			flex-grow 1
+			display flex
+			flex-direction row
+			.social_icon
+				a 
+					width: 36px;
+					height: 36px;
+					padding: 12px;
+					border 1px solid red
+					svg 	
+						height 14px
+						width 14px
+			.shopping_basket
+				border: 1px solid red
+				width 43px
+				height 43px
+
+@media screen and (max-width: 1000px)
+	.header_menu
+		display: none !important;
+		// ul 
+		// 	li 
+		// 		display block
+		
+	.responsive
+		// position: absolute
+		// top 0
+		// left 0
+		background: rgba(68, 59, 57, 1);
+		height: 120px
+		width 100%
+		border 1px solid red
+		display block !important
+		ul 
+			li 
+				display: block !important
+	.icon
+		display block !important
+		position: absolute
+		top 0 
+		left 0
+		z-index: 999
+		color: white;
+		font-size: 24px;
+	.header_icon
+		display none !important
+	.header_logo_wrap
+		display: flex;
+		justify-content: center;
