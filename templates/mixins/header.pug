@@ -1,0 +1,27 @@
+mixin header()
+	header
+		.header_inner#header
+			
+			.header_logo_wrap
+				.header_logo
+					a(href='')
+						img(src='/images/logo.png', alt='')
+			
+			a.icon(href="javascript:void(0);"  onclick="toggleMenu()") &#9776
+
+			.header_menu#toggle
+				ul
+					li: a(href='/') home
+					li: a(href='/gallery') portfolio 
+					li.dropdown
+						a(href='') About Bex
+						ul.drop-nav
+							li: a(href='/bio') bio
+							li: a(href='/blog') blog
+							li: a(href='/video') videos
+							li: a(href='/contact') contact
+
+					li: a(href='') contact us
+			
+			.header_icon
+				+social()

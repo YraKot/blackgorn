@@ -1,34 +1,30 @@
-.slider_wrap
-	
-	.slider
-		position relative
-		margin auto
+.slider
+	position relative
+	margin auto
 
-		.slides
-			img 
-				width 100%
-		.prev, .next
-			cursor pointer
-			position absolute
-			top 50%
-			width auto
-			margin-top -22px
-			padding 16px
-			color white
-			font-size 18px
-			font-weight 600
-			transition 0.6s ease 
-			
+	.slides
+		img 
+			width 100%
+	.prev, .next
+		cursor pointer
+		position absolute
+		top 50%
+		width auto
+		margin-top -22px
+		padding 16px
+		color white
+		font-size 18px
+		font-weight 600
+		transition 0.6s ease 
 		
-		.next 
-			right 0
-			border-radius 3px 0 0 3px
-		.prev
-			left 0
-			border-radius 0 3px 3px 0
-
+	
+	.next 
+		right 0
+		border-radius 3px 0 0 3px
+	.prev
+		left 0
+		border-radius 0 3px 3px 0
 .content_wrapper
-	border: 1px solid red;
 	background-color: #ffffff;
 	display: flex;
 	flex-direction: row;
@@ -36,19 +32,13 @@
 	padding: 0 20px;
 
 	.content_wrap_img
-		// flex-grow 1
-		// max-width:50%;
-		width 49%
-		border: 1px solid green;
+		width 50%
 		.content_img
 			padding-right: 20px;
 			img 
 				width: 100%;
 	.content_wrap_info
-		// flex-grow: 1;
-		border: 1px solid blue
 		width: 50%;
-		// max-width: 49%;
 		.content_info
 			padding-left: 20px;
 			h1
@@ -68,9 +58,9 @@
 	.content_wrap_img
 		width 100% !important 
 		.content_img
-			padding: 0;
+			padding 0
 	.content_wrap_info 
 		width 100% !important
 		.content_info
-			padding: 0;
+			padding-left 0 !important
 

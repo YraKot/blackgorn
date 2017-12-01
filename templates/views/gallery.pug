@@ -1,25 +1,182 @@
 extends ../layouts/default
 
-block intro
-	.container
-		h1 Gallery
+//- block intro
+//- 	.container
+//- 		h1 Gallery
 	
 block content
-	.container
-		if galleries.length
-			each gallery in galleries
-				h2= gallery.name
-					if gallery.publishedDate
-						.pull-right.text-muted= gallery._.publishedDate.format('Do MMM YYYY')
+	.jumbotron(style="background-image: url('/images/gallery.jpg');")
+	.wrapper#site-content
+		.container
+			.gallery_grid
+				.block
+					.block_header
+						h4 PUBLIC ART
+					.block_img
+						a(href="")
+							img(src="../images/gallery/public-art-1.jpg", alt="")
+						a(href="")
+							img(src="../images/gallery/public-art-2.jpg", alt="")
+						a(href="")
+							img(src="../images/gallery/public-art-3.jpg", alt="")
+						a(href="")
+							img(src="../images/gallery/public-art-4.jpg", alt="")
+						a(href="")
+							img(src="../images/gallery/public-art-5.jpg", alt="")
+						a(href="")
+							img(src="../images/gallery/public-art-6.jpg", alt="")
+						a(href="")
+							img(src="../images/gallery/public-art-7.jpg", alt="")
+						a(href="")
+							img(src="../images/gallery/public-art-8.jpg", alt="")
+						a(href="")
+							img(src="../images/gallery/public-art-9.jpg", alt="")
+						a(href="")
+							img(src="../images/gallery/public-art-10.jpg", alt="")
+						a(href="")
+							img(src="../images/gallery/public-art-11.jpg", alt="")
+						a(href="")
+							img(src="../images/gallery/public-art-12.jpg", alt="")
+						a(href="")
+							img(src="../images/gallery/public-art-13.jpg", alt="")
+						a(href="")
+							img(src="../images/gallery/public-art-14.jpg", alt="")
+						a(href="")
+							img(src="../images/gallery/public-art-15.jpg", alt="")
+				.block
+					.block_header
+						h4 GARDEN ACCESSORIES
+					.block_img
+						a(href="")
+							img(src="../images/gallery/garden-1.jpg", alt="")
+						a(href="")
+							img(src="../images/gallery/garden-2.jpg", alt="")
+						a(href="")
+							img(src="../images/gallery/garden-3.jpg", alt="")
+						a(href="")
+							img(src="../images/gallery/garden-4.jpg", alt="")
+						a(href="")
+							img(src="../images/gallery/garden-5.jpg", alt="")
+						a(href="")
+							img(src="../images/gallery/garden-6.jpg", alt="")
+						a(href="")
+							img(src="../images/gallery/garden-7.jpg", alt="")
+						a(href="")
+							img(src="../images/gallery/garden-8.jpg", alt="")
+						a(href="")
+							img(src="../images/gallery/garden-9.jpg", alt="")
+						a(href="")
+							img(src="../images/gallery/garden-10.jpg", alt="")
+						a(href="")
+							img(src="../images/gallery/garden-11.jpg", alt="")
+						a(href="")
+							img(src="../images/gallery/garden-12.jpg", alt="")
+						a(href="")
+							img(src="../images/gallery/garden-13.jpg", alt="")
+						a(href="")
+							img(src="../images/gallery/garden-14.jpg", alt="")
+						a(href="")
+							img(src="../images/gallery/garden-15.jpg", alt="")
+						a(href="")
+							img(src="../images/gallery/garden-16.jpg", alt="")
+						a(href="")
+							img(src="../images/gallery/garden-17.jpg", alt="")
+						a(href="")
+							img(src="../images/gallery/garden-18.jpg", alt="")
+						a(href="")
+							img(src="../images/gallery/garden-19.jpg", alt="")
+						a(href="")
+							img(src="../images/gallery/garden-20.jpg", alt="")
+						a(href="")
+							img(src="../images/gallery/garden-21.jpg", alt="")
+						a(href="")
+							img(src="../images/gallery/garden-22.jpg", alt="")
+						a(href="")
+							img(src="../images/gallery/garden-23.jpg", alt="")
+						a(href="")
+							img(src="../images/gallery/garden-24.jpg", alt="")
+						a(href="")
+							img(src="../images/gallery/garden-25.jpg", alt="")
+						a(href="")
+							img(src="../images/gallery/garden-26.jpg", alt="")
+						a(href="")
+							img(src="../images/gallery/garden-27.jpg", alt="")
+						a(href="")
+							img(src="../images/gallery/garden-28.jpg", alt="")
+						a(href="")
+							img(src="../images/gallery/garden-29.jpg", alt="")
+				.block
+					.block_header
+						h4 INTERIORS
+					.block_img
+						a(href="")
+							img(src="../images/gallery/interiors-1.jpg", alt="")
+						a(href="")
+							img(src="../images/gallery/interiors-2.jpg", alt="")
+						a(href="")
+							img(src="../images/gallery/interiors-3.jpg", alt="")
+						a(href="")
+							img(src="../images/gallery/interiors-4.jpg", alt="")
+						a(href="")
+							img(src="../images/gallery/interiors-5.jpg", alt="")
+						a(href="")
+							img(src="../images/gallery/interiors-6.jpg", alt="")
+						a(href="")
+							img(src="../images/gallery/interiors-7.jpg", alt="")
+						a(href="")
+							img(src="../images/gallery/interiors-8.jpg", alt="")
+						a(href="")
+							img(src="../images/gallery/interiors-9.jpg", alt="")
+						a(href="")
+							img(src="../images/gallery/interiors-10.jpg", alt="")
+						a(href="")
+							img(src="../images/gallery/interiors-11.jpg", alt="")
+						a(href="")
+							img(src="../images/gallery/interiors-12.jpg", alt="")
+						a(href="")
+							img(src="../images/gallery/interiors-13.jpg", alt="")
+						a(href="")
+							img(src="../images/gallery/interiors-14.jpg", alt="")
+						a(href="")
+							img(src="../images/gallery/interiors-15.jpg", alt="")
+						a(href="")
+							img(src="../images/gallery/interiors-16.jpg", alt="")
+						a(href="")
+							img(src="../images/gallery/interiors-17.jpg", alt="")
+						a(href="")
+							img(src="../images/gallery/interiors-18.jpg", alt="")
+						a(href="")
+							img(src="../images/gallery/interiors-19.jpg", alt="")
+						a(href="")
+							img(src="../images/gallery/interiors-20.jpg", alt="")
+						a(href="")
+							img(src="../images/gallery/interiors-21.jpg", alt="")
+						a(href="")
+							img(src="../images/gallery/interiors-22.jpg", alt="")
+						a(href="")
+							img(src="../images/gallery/interiors-23.jpg", alt="")
+						a(href="")
+							img(src="../images/gallery/interiors-24.jpg", alt="")
+						a(href="")
+							img(src="../images/gallery/interiors-25.jpg", alt="")
+						a(href="")
+							img(src="../images/gallery/interiors-26.jpg", alt="")
+
+	//- .container
+	//- 	if galleries.length
+	//- 		each gallery in galleries
+	//- 			h2= gallery.name
+	//- 				if gallery.publishedDate
+	//- 					.pull-right.text-muted= gallery._.publishedDate.format('Do MMM YYYY')
 				
-				.row.gallery-images
-					if gallery.heroImage.exists
-						.col-sm-4.col-md-4.gallery-image: img(src=gallery._.heroImage.limit(680,680)).img-rounded
-						.col-sm-8.col-md-8: .row
-							each image in gallery.images
-								.col-xs-4.col-sm-4.col-md-3.gallery-image: img(src=image.limit(300,300)).img-rounded
-					else
-						each image in gallery.images
-							.col-xs-6.col-sm-4.col-md-3.gallery-image: img(src=image.limit(300,300)).img-rounded
-		else
-			h3.text-muted There are no image galleries yet.
+	//- 			.row.gallery-images
+	//- 				if gallery.heroImage.exists
+	//- 					.col-sm-4.col-md-4.gallery-image: img(src=gallery._.heroImage.limit(680,680)).img-rounded
+	//- 					.col-sm-8.col-md-8: .row
+	//- 						each image in gallery.images
+	//- 							.col-xs-4.col-sm-4.col-md-3.gallery-image: img(src=image.limit(300,300)).img-rounded
+	//- 				else
+	//- 					each image in gallery.images
+	//- 						.col-xs-6.col-sm-4.col-md-3.gallery-image: img(src=image.limit(300,300)).img-rounded
+	//- 	else
+	//- 		h3.text-muted There are no image galleries yet.
