@@ -15,6 +15,7 @@ Bio.add({
 	publishedDate: { type: Date, default: Date.now },
 	heroImage: { type: Types.CloudinaryImage },
 	images: { type: Types.CloudinaryImages },
+	description: { type: Types.Html, wysiwyg: true, height: 250 },
 });
 
 Bio.register();

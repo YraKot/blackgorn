@@ -7,60 +7,62 @@ block content
 			p Welcome to Bex’s occasional blog. Usually too busy sketching, forging or hammering, she sometimes has the time to put fingers to keyboard and bring you her thoughts.
 			
 		.grid
-			a.cell( href="#")
-				.post_img
-					img(src="images/post_1.jpg", alt="")
-				.post_text
-					p 18 AUGUST, 2017 IN LATEST NEWS
-					h3 Head Talks & My Bipolar
-			a.cell( href="#")
-				.post_img
-					img(src="images/post_2.jpg", alt="")
-				.post_text
-					p 18 AUGUST, 2017 IN LATEST NEWS
-					h3 Head Talks & My Bipolar
-			a.cell( href="#")
-				.post_img
-					img(src="images/post_3.jpg", alt="")
-				.post_text
-					p 18 AUGUST, 2017 IN LATEST NEWS
-					h3 Head Talks & My Bipolar
-			a.cell( href="#")
-				.post_img
-					img(src="images/post_4.jpg", alt="")
-				.post_text
-					p 18 AUGUST, 2017 IN LATEST NEWS
-					h3 Head Talks & My Bipolar
-			a.cell( href="#")
-				.post_img
-					img(src="images/post_5.jpg", alt="")
-				.post_text
-					p 18 AUGUST, 2017 IN LATEST NEWS
-					h3 Head Talks & My Bipolar
-			a.cell( href="#")
-				.post_img
-					img(src="images/post_6.jpg", alt="")
-				.post_text
-					p 18 AUGUST, 2017 IN LATEST NEWS
-					h3 Head Talks & My Bipolar
-			a.cell( href="#")
-				.post_img
-					img(src="images/post_7.jpg", alt="")
-				.post_text
-					p 18 AUGUST, 2017 IN LATEST NEWS
-					h3 Head Talks & My Bipolar
-			a.cell( href="#")
-				.post_img
-					img(src="images/post_8.jpg", alt="")
-				.post_text
-					p 18 AUGUST, 2017 IN LATEST NEWS
-					h3 Head Talks & My Bipolar
-			a.cell( href="#")
-				.post_img
-					img(src="images/post_9.jpg", alt="")
-				.post_text
-					p 18 AUGUST, 2017 IN LATEST NEWS
-					h3 Head Talks & My Bipolar
+			each post in data.posts.results
+				a.cell( href="#")
+					.post_img
+						if post.image.exists
+							img(src=post._.image.fit(160,160)).img.pull-right
+					.post_text
+						p #{post._.publishedDate.format('MMMM Do, YYYY')} 
+						h3=post.title
+//- 			a.cell( href="#")
+//- 				.post_img
+//- 					img(src="images/post_2.jpg", alt="")
+//- 				.post_text
+//- 					p 18 AUGUST, 2017 IN LATEST NEWS
+//- 					h3 Head Talks & My Bipolar
+//- 			a.cell( href="#")
+//- 				.post_img
+//- 					img(src="images/post_3.jpg", alt="")
+//- 				.post_text
+//- 					p 18 AUGUST, 2017 IN LATEST NEWS
+//- 					h3 Head Talks & My Bipolar
+//- 			a.cell( href="#")
+//- 				.post_img
+//- 					img(src="images/post_4.jpg", alt="")
+//- 				.post_text
+//- 					p 18 AUGUST, 2017 IN LATEST NEWS
+//- 					h3 Head Talks & My Bipolar
+//- 			a.cell( href="#")
+//- 				.post_img
+//- 					img(src="images/post_5.jpg", alt="")
+//- 				.post_text
+//- 					p 18 AUGUST, 2017 IN LATEST NEWS
+//- 					h3 Head Talks & My Bipolar
+//- 			a.cell( href="#")
+//- 				.post_img
+//- 					img(src="images/post_6.jpg", alt="")
+//- 				.post_text
+//- 					p 18 AUGUST, 2017 IN LATEST NEWS
+//- 					h3 Head Talks & My Bipolar
+//- 			a.cell( href="#")
+//- 				.post_img
+//- 					img(src="images/post_7.jpg", alt="")
+//- 				.post_text
+//- 					p 18 AUGUST, 2017 IN LATEST NEWS
+//- 					h3 Head Talks & My Bipolar
+//- 			a.cell( href="#")
+//- 				.post_img
+//- 					img(src="images/post_8.jpg", alt="")
+//- 				.post_text
+//- 					p 18 AUGUST, 2017 IN LATEST NEWS
+//- 					h3 Head Talks & My Bipolar
+//- 			a.cell( href="#")
+//- 				.post_img
+//- 					img(src="images/post_9.jpg", alt="")
+//- 				.post_text
+//- 					p 18 AUGUST, 2017 IN LATEST NEWS
+//- 					h3 Head Talks & My Bipolar
 
 
 
@@ -86,9 +88,9 @@ block content
 //- 		if post.content.extended
 //- 			p.read-more: a(href='/blog/post/' + post.slug) Read more...
 
-//- block intro
-//- 	.container
-//- 		h1= data.category ? data.category.name : 'Blog'
+//- //- block intro
+//- //- 	.container
+//- //- 		h1= data.category ? data.category.name : 'Blog'
 
 //- block content
 //- 	.container: .row

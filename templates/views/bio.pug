@@ -3,19 +3,10 @@ extends ../layouts/default
 block content
 	.wrapper#site-content
 		.container
-			.container_img
-				img(src="./images/bio.jpg", alt="")
-			.container_content
-				.bio_content
-					h1 BEX SIMON – ARTIST BLACKSMITH – BIOGRAPHY
-					p Bex has always been an artist with a fascination for texture and material.
-					p Whilst undertaking a Foundation in Art at the Surrey Institute, Bex attended a demonstration of forging and welding, and realised that blacksmithing was a skill she had to explore and incorporate into her unique, organic-influenced artwork.
-					p “In the past I have taken inspirations from nature, the Art Nouveau movement and artists like Gaudi. Now I am moving more towards futurism and technology and studying influential people such as Zaha Hadid, with her fascination with mathematics.  She feels like a contemporary Gaudi.”
-					p A firm believer that there is always more to learn, Bex continues to study techniques old and new, always seeking out ways to apply traditional craft to modern ideas; proud of what she’s achieved but aware that there’s always room for improvement.
-					p Bex admits to being slightly backwards in her approach to design: “I work using shape, form and balance – never really considering the technical aspect until the design is finished.  This way I don’t restrict myself.  I  also love collaborating with others as it means the possibilities are endless.”
-					p Fiercely individual, Bex’s favourite shops are flea markets, where she can pick and blend styles from any era. She buys clothes in second hand shops, so that she can avoid fashion and make her own style. She can’t decide if her favourite place is the Victoria & Albert Museum, or the Science Museum. After being tested at an early age, her parents were told that Bex would either be an artist or a fighter pilot.
-					p She lives at home with her husband, and business partner, David, and their two children. She hates cooking. On design days, when she isn’t blasting, hammering and forging, she has to exercise or she’s likely to explode.
-					p Working from a noisy, hot and vibrant workshop in Surrey, Bex loves her job, and is always excited by the next challenge, be it forging a garden feature for a private client, designing a piece of public art, or an upcycling project for the BBC’s Money For Nothing programme.
-					p “The thing that strikes you about Bex is the energy and enthusiasm that she brings to all her projects… The wealth of creative ideas that she came back with was overwhelming” – Jo Malone, fragrance guru and entrepreneur.
-					p There are no limits to the creative solutions and artistic interpretations Bex has for everyday functional forms, in and around the home and garden. From bespoke wrought iron gates and railings, tailored to the needs of each individual client, to privately commissioned furniture, sculpture, or interior design pieces.
-
+			if bios.length
+				each bio in bios
+					.container_img
+						img(src=bio._.heroImage.limit(680,680)).img-rounded
+					.container_content
+						.bio_content
+							p!=bio.description
